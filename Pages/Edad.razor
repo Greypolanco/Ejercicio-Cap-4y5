@@ -1,0 +1,33 @@
+﻿@page "/EdadMayor"
+
+<p> El mas mayor es: @TheOldest()</p>
+<p> El mas joven es: @TheYouger()</p>
+@code {
+
+    private int[] person = {5,10,2,6,8};
+    private int TheOldest()
+    {
+        int older = 0;
+        for(int i=0; i<person.Length; i++)
+        {
+            if(person[i] > older)
+            {
+                older = person[i];
+            }
+        }
+        return older;
+    }
+
+    private int TheYouger()
+    {
+        int youger=person[0];
+        for(int i=0; i<person.Length; i++){
+            if(person[i]<youger)
+            {
+                youger = person[i];
+            }
+        }
+        return youger;
+    }
+
+}
