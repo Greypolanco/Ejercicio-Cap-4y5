@@ -1,0 +1,21 @@
+﻿@page "/Factorial"
+
+<h3>Factorial</h3>
+
+<input type="number" placeholder="introduzca el numero" @bind = "num">
+<p>el factorial del @num es: @FACTORIAL(num)</p>
+
+@code 
+{
+    private int num {get; set;}
+
+    public int FACTORIAL(int num){
+        if(num < 1){
+            return 1;
+        }
+        else
+            return num * FACTORIAL(num-1);
+        
+    }
+
+}
