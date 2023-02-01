@@ -1,0 +1,16 @@
+﻿@page "/Multiplicacion"
+
+<h3>Ingrese un Numero</h3>
+<input type="number" @bind="numero"y/>
+
+@for(int i =1; i<=10; i++)
+{
+    resultado = i * numero;
+    <p> @i x @numero = @resultado </p>
+}
+
+@code 
+{
+    private int numero {get; set;}
+    private int resultado {get; set;}
+}
