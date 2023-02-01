@@ -2,18 +2,18 @@
 
 <h3>Potencia</h3>
 
-<input type="number" placeholder="introduzca la base " @bind = "numero1"/>
-<input type = "number" placeholder="introduzca el exponente" @bind = "numero2"/>
-<label> @numero1 ^ @numero2 = @Resultado()</label>
+<input type="number" placeholder="introduzca la base " @bind = "num1"/>
+<input type = "number" placeholder="introduzca el exponente" @bind = "num2"/>
+<label> @num1 ^ @num2 = @Result()</label>
 
 @code 
 {
-    private double numero1 {get; set;}
-    private double numero2 {get; set;}
+    private double num1 {get; set;}
+    private double num2 {get; set;}
 
-    private double Resultado()
+    private double Result()
     {
-        double resultado = Math.Pow(numero1,numero2);
+        double resultado = Math.Pow(num1,num2);
         return resultado;
     }
 }
